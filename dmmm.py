@@ -27,8 +27,11 @@ async def on_message(message):
             await client.get_channel(channel).send(f"`{message.author.name}({message.author.id})`", embed=embed)
 
     if message.content.startswith('!디엠'):
-        msg = message.content[26:]
-        await message.mentions[0].send(f"**{message.author.name}** 님의 답장: {msg}")
-        await message.channel.send(f'`{message.mentions[0]}`에게 DM을 보냈습니다')
+        if message.author.guild_permissions.manage_messages:
+            msg = message.content[26:]
+            await message.mentions[0].send(f"**{message.author.name}** 님의 답장: {msg}")
+            await message.channel.send(f'`{message.mentions[0]}`에게 DM을 보냈습니다')
+        else:
+            return
         
 client.run(token)
