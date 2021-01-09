@@ -30,5 +30,6 @@ async def on_message(message):
         author = client.get_user(int(message.content[4:22]))
         msg = message.content[23:]
         await author.send(f"**{message.author.name}** 님의 답장: {msg}")
+        await message.channel.send(f'`{author}`에게 DM을 보냈습니다')
         
 client.run(token)
