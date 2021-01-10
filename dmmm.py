@@ -4,7 +4,7 @@ client = discord.Client()
 
 
 token = '★봇토큰★'
-channel = '★디엠 내용 보내질 채널ID★'
+channel = ★디엠 내용 보내질 채널ID★
 
 
 @client.event
