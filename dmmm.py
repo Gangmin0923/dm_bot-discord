@@ -4,7 +4,6 @@ client = discord.Client()
 
 
 token = '★봇토큰★'
-channel = ★디엠 내용 보내질 채널ID★
 
 
 @client.event
@@ -24,7 +23,7 @@ async def on_message(message):
             embed.add_field(name='전송자', value=message.author, inline=False)
             embed.add_field(name='내용', value=message.content, inline=False)
             embed.set_footer(text=f'!디엠 <@{message.author.id}> [할말] 을 통해 답장을 보내주세요!')
-            await client.get_channel(channel).send(f"`{message.author.name}({message.author.id})`", embed=embed)
+            await client.get_channel(★디엠 내용 보내질 채널ID★).send(f"`{message.author.name}({message.author.id})`", embed=embed)
 
     if message.content.startswith('!디엠'):
         if message.author.guild_permissions.manage_messages:
