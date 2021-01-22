@@ -3,13 +3,13 @@ import discord
 client = discord.Client()
 
 
-token = '★봇토큰★'
+token = 'Nzk5MzA0MzM4MDk0MDMwODQ5.YABoLA.Me2pv6pE0jfptBbMwejBq4igpQQ'
 
 
 @client.event
 async def on_ready():
     print("봇이 성공적으로 실행되었습니다.")
-    game = discord.Game('★~하는중에 표시될 네임 작성★')
+    game = discord.Game('DM 항시가능')
     await client.change_presence(status=discord.Status.online, activity=game)
 
 
